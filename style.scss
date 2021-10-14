@@ -1,0 +1,126 @@
+// variables
+$Grayishblue: hsl(237, 18%, 59%);
+$Softred: hsl(345, 95%, 68%);
+$White: hsl(0, 0%, 100%);
+$Darkdesaturatedblue: hsl(236, 21%, 26%);
+$Verydarkblue: hsl(235, 16%, 14%);
+$Verydark: hsl(234, 17%, 12%);
+$blue: hsl(272, 21%, 14%);
+// mixins
+@mixin smaller($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+@mixin bigger($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  @include smaller(350px) {
+    font-size: 58%;
+  }
+  @include smaller(350px) {
+    font-size: 55%;
+  }
+}
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.4rem;
+  color: $White;
+  min-height: 100vh;
+  background: url("../images/bg-stars.svg") no-repeat center center / cover,
+    url("../images/pattern-hills.svg") no-repeat center bottom / 100% 25%,
+    linear-gradient(to bottom, $Verydarkblue, $blue);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 700px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 14.5rem 0 4.5rem;
+}
+.header {
+  width: 100%;
+  margin-bottom: 5rem;
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 2.125rem;
+    text-align: center;
+  }
+}
+.count {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24rem;
+
+  &__timer {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 0.5rem;
+    background-color: $Darkdesaturatedblue;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.5rem 0.2rem rgba($Verydark, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $Softred;
+    position: relative;
+    p {
+      font-size: 3rem;
+    }
+  }
+  &__label {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.3rem;
+    color: $Grayishblue;
+  }
+  &__circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: $Verydarkblue;
+    &--1 {
+      left: -0.5rem;
+    }
+    &--2 {
+      right: -0.5rem;
+    }
+  }
+}
+
+.footer {
+  &__links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  &__link {
+    color: $Grayishblue;
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+    &:hover {
+      color: $Softred;
+    }
+  }
+}

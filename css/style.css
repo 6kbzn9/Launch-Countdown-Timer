@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  min-height: 100vh;
+  background: url("../images/bg-stars.svg") no-repeat center center/cover, url("../images/pattern-hills.svg") no-repeat center bottom/100% 25%, -webkit-gradient(linear, left top, left bottom, from(#1e1f29), to(#241c2b));
+  background: url("../images/bg-stars.svg") no-repeat center center/cover, url("../images/pattern-hills.svg") no-repeat center bottom/100% 25%, linear-gradient(to bottom, #1e1f29, #241c2b);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 700px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 14.5rem 0 4.5rem;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.header__title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 2.125rem;
+  text-align: center;
+}
+
+.count {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 24rem;
+}
+
+.count__timer {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.5rem;
+  background-color: #343650;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0 0.5rem 0.2rem rgba(25, 26, 36, 0.4);
+          box-shadow: 0 0.5rem 0.2rem rgba(25, 26, 36, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fb6087;
+  position: relative;
+}
+
+.count__timer p {
+  font-size: 3rem;
+}
+
+.count__label {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.3rem;
+  color: #8486a9;
+}
+
+.count__circle {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #1e1f29;
+}
+
+.count__circle--1 {
+  left: -0.5rem;
+}
+
+.count__circle--2 {
+  right: -0.5rem;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__link {
+  color: #8486a9;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.footer__link:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.footer__link:hover {
+  color: #fb6087;
+}
+/*# sourceMappingURL=style.css.map */
