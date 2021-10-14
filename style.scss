@@ -43,15 +43,26 @@ body {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   max-width: 700px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 14.5rem 0 4.5rem;
+  @include bigger(620px) {
+    padding: 12.5rem 0 4.5rem;
+  }
 }
 .header {
   width: 100%;
   margin-bottom: 5rem;
+  @include bigger(440px) {
+    margin-bottom: 8rem;
+  }
+  @include bigger(620px) {
+    margin-bottom: 9rem;
+  }
   &__title {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
@@ -65,7 +76,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin-bottom: 24rem;
+  margin-bottom: 5rem;
 
   &__timer {
     width: 7rem;
@@ -79,8 +90,27 @@ body {
     justify-content: center;
     color: $Softred;
     position: relative;
-    p {
-      font-size: 3rem;
+    font-size: 3rem;
+    @include bigger(440px) {
+      width: 9rem;
+      height: 8.25rem;
+      font-size: 4.25rem;
+      margin-bottom: 2rem;
+    }
+    @include bigger(510px) {
+      width: 10.5rem;
+      height: 9.5rem;
+      font-size: 5.25rem;
+    }
+    @include bigger(620px) {
+      width: 12rem;
+      height: 10.5rem;
+      font-size: 6.25rem;
+    }
+    @include bigger(720px) {
+      width: 14rem;
+      height: 12.5rem;
+      font-size: 7.25rem;
     }
   }
   &__label {
@@ -107,6 +137,7 @@ body {
 }
 
 .footer {
+  margin-top: auto;
   &__links {
     display: flex;
     align-items: flex-end;
