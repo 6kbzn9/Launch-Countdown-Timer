@@ -118,6 +118,10 @@ body {
     font-size: 0.875rem;
     letter-spacing: 0.3rem;
     color: $Grayishblue;
+    @include bigger(620px) {
+      font-size: 1.25rem;
+      letter-spacing: 0.4rem;
+    }
   }
   &__circle {
     position: absolute;

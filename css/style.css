@@ -152,6 +152,13 @@ body {
   color: #8486a9;
 }
 
+@media (min-width: 620px) {
+  .count__label {
+    font-size: 1.25rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
 .count__circle {
   position: absolute;
   top: 50%;
